@@ -6,10 +6,7 @@
 "time": "2020-07-25",
 "license": "GPL-2.0",
 "authors": [{
-  "name": "Charlie Ciccia",
-  "email": "cciccia@gmail.com",
-  "homepage": "https://github.com/cciccia/",
-  "role": "Omerta"
+  "name": "Isis",
 }],
 "require": {
   "php": ">=5.3.3",
@@ -20,3 +17,6 @@
 "extra": {
   "display-name": "Topic Maker",
   "soft-require": {
+    "phpbb/phpbb": "~3.2"
+	}
+}
