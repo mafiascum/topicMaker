@@ -1,12 +1,13 @@
+{
 "name": "mafiascum/topicmaker",
 "type": "phpbb-extension",
-"description": "MS Topic owning privileges"
+"description": "MS Topic owning privileges",
 "homepage": "https://github.com/mafiascum/topicmaker",
 "version": "0.1.0",
 "time": "2020-07-25",
 "license": "GPL-2.0",
 "authors": [{
-  "name": "Isis",
+  "name": "Isis"
 }],
 "require": {
   "php": ">=5.3.3",
@@ -19,4 +20,5 @@
   "soft-require": {
     "phpbb/phpbb": "~3.2"
 	}
+}
 }
