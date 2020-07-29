@@ -2,7 +2,7 @@
 "name": "mafiascum/topicmaker",
 "type": "phpbb-extension",
 "description": "MS Topic owning privileges",
-"homepage": "https://github.com/mafiascum/topicmaker",
+"homepage": "https://github.com/mafiascum/topicMaker",
 "version": "0.1.0",
 "time": "2020-07-25",
 "license": "GPL-2.0",
