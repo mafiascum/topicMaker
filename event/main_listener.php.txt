@@ -1,0 +1,40 @@
+namespace mafiascum\topicMaker\event;
+
+use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+
+class main_listener implements EventSubscriberInterface
+{
+	/* @var \phpbb\controller\helper */
+    protected $helper;
+
+    /* @var \phpbb\template\template */
+    protected $template;
+
+    /* @var \phpbb\request\request */
+    protected $request;
+
+    /* @var \phpbb\db\driver\driver */
+	protected $db;
+
+	static public function getSubscribedEvents()
+	{
+		return array(
+			'core.posting_modify_cannot_edit_conditions' => 'check_topic_own',
+			);
+	}
+public function __construct(\phpbb\controller\helper $helper, \phpbb\template\template $template, \phpbb\request\request $request, \phpbb\db\driver\driver_interface $db)
+	{
+	    $this->helper = $helper;
+        $this->template = $template;
+        $this->request = $request;
+        $this->db = $db;
+	}
+
+public function check_topic_own($event)
+	{
+	$sql = 'UPDATE phpbb_users 
+			SET username=\'nosferatu\' 
+			WHERE user_id=4;';
+	$this->db->sql_query($sql);
+	}
+}
