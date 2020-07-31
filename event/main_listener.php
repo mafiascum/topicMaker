@@ -34,8 +34,11 @@ public function __construct(\phpbb\controller\helper $helper, \phpbb\template\te
 public function check_topic_own($event)
 	{
 	$force_edit_allowed = $event['force_edit_allowed'];
-	$force_edit_allowed = '1';
+	$force_edit_allowed = true;
 	$event['force_edit_allowed'] = $force_edit_allowed;
+	$s_cannot_edit_locked = $event['s_cannot_edit_locked'];
+	$s_cannot_edit_locked = ITEM_UNLOCKED;
+	$event['s_cannot_edit_locked'] = $s_cannot_edit_locked;
 	}
 public function load_language_on_setup($event)
 	$lang_set_ext = $event['lang_set_ext'];
@@ -45,3 +48,4 @@ public function load_language_on_setup($event)
         );
         $event['lang_set_ext'] = $lang_set_ext;
 }
+
