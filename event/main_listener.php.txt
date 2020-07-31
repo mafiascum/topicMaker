@@ -19,7 +19,7 @@ class main_listener implements EventSubscriberInterface
 	static public function getSubscribedEvents()
 	{
 		return array(
-			'core.mcp_warn_post_after' => 'check_topic_own',
+			'core.posting_modify_cannot_edit_conditions' => 'check_topic_own',
 			'core.user_setup' => 'load_language_on_setup',
 			);
 	}
@@ -33,7 +33,9 @@ public function __construct(\phpbb\controller\helper $helper, \phpbb\template\te
 
 public function check_topic_own($event)
 	{
-	
+	$force_edit_allowed = $event['force_edit_allowed'];
+	$force_edit_allowed = true;
+	$event['force_edit_allowed'] = $force_edit_allowed;
 	}
 public function load_language_on_setup($event)
 	$lang_set_ext = $event['lang_set_ext'];
