@@ -19,7 +19,7 @@ class main_listener implements EventSubscriberInterface
 	static public function getSubscribedEvents()
 	{
 		return array(
-			'core.posting_modify_cannot_edit_conditions' => 'check_topic_own',
+			'core.mcp_warn_post_after' => 'check_topic_own',
 			);
 	}
 public function __construct(\phpbb\controller\helper $helper, \phpbb\template\template $template, \phpbb\request\request $request, \phpbb\db\driver\driver_interface $db)
@@ -32,9 +32,6 @@ public function __construct(\phpbb\controller\helper $helper, \phpbb\template\te
 
 public function check_topic_own($event)
 	{
-	$sql = 'UPDATE phpbb_users 
-			SET username=\'nosferatu\' 
-			WHERE user_id=4;';
-	$this->db->sql_query($sql);
+	trigger_error('NO_USER');
 	}
 }
