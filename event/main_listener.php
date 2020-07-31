@@ -34,7 +34,7 @@ public function __construct(\phpbb\controller\helper $helper, \phpbb\template\te
 public function check_topic_own($event)
 	{
 	$force_edit_allowed = $event['force_edit_allowed'];
-	$force_edit_allowed = true;
+	$force_edit_allowed = '1';
 	$event['force_edit_allowed'] = $force_edit_allowed;
 	}
 public function load_language_on_setup($event)
