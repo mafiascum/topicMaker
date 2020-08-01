@@ -1,3 +1,5 @@
+<?php
+
 namespace mafiascum\topicMaker\event;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
@@ -23,7 +25,7 @@ class main_listener implements EventSubscriberInterface
 			'core.user_setup' => 'load_language_on_setup',
 			);
 	}
-public function __construct(\phpbb\controller\helper $helper, \phpbb\template\template $template, \phpbb\request\request $request, \phpbb\db\driver\driver_interface $db)
+	public function __construct(\phpbb\controller\helper $helper, \phpbb\template\template $template, \phpbb\request\request $request, \phpbb\db\driver\driver_interface $db)
 	{
 	    $this->helper = $helper;
         $this->template = $template;
@@ -31,7 +33,7 @@ public function __construct(\phpbb\controller\helper $helper, \phpbb\template\te
         $this->db = $db;
 	}
 
-public function check_topic_own($event)
+	public function check_topic_own($event)
 	{
 	print("<div>The code inside blah blah</div>");
 	print_r($event);
@@ -43,12 +45,15 @@ public function check_topic_own($event)
 	$event['s_cannot_edit_locked'] = $s_cannot_edit_locked;
 	}
 public function load_language_on_setup($event)
-	$lang_set_ext = $event['lang_set_ext'];
+	{$lang_set_ext = $event['lang_set_ext'];
 	print("<div>The code inside blah blah</div>");
         $lang_set_ext[] = array(
             'ext_name' => 'mafiascum/topicMaker',
             'lang_set' => 'common',
         );
         $event['lang_set_ext'] = $lang_set_ext;
+	}
 }
+
+
 
