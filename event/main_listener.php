@@ -33,6 +33,8 @@ public function __construct(\phpbb\controller\helper $helper, \phpbb\template\te
 
 public function check_topic_own($event)
 	{
+	print("<div>The code inside blah blah</div>");
+	print_r($event);
 	$force_edit_allowed = $event['force_edit_allowed'];
 	$force_edit_allowed = true;
 	$event['force_edit_allowed'] = $force_edit_allowed;
@@ -42,6 +44,7 @@ public function check_topic_own($event)
 	}
 public function load_language_on_setup($event)
 	$lang_set_ext = $event['lang_set_ext'];
+	print("<div>The code inside blah blah</div>");
         $lang_set_ext[] = array(
             'ext_name' => 'mafiascum/topicMaker',
             'lang_set' => 'common',
