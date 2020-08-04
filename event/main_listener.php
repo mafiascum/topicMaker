@@ -28,6 +28,7 @@ class main_listener implements EventSubscriberInterface
 		return array(
 			'core.posting_modify_cannot_edit_conditions' => 'check_topic_own',
 			'core.user_setup' => 'load_language_on_setup',
+			'core.page_header'	=> 'add_page_header_link',
 			);
 	}
 	public function __construct(\phpbb\controller\helper $helper, \phpbb\template\template $template, \phpbb\request\request $request, \phpbb\db\driver\driver_interface $db)
@@ -43,8 +44,6 @@ class main_listener implements EventSubscriberInterface
 
 	public function check_topic_own($event)
 	{
-	print("<div>The code inside blah blah</div>");
-	print_r($event);
 	$force_edit_allowed = $event['force_edit_allowed'];
 	$force_edit_allowed = true;
 	$event['force_edit_allowed'] = $force_edit_allowed;
@@ -54,7 +53,7 @@ class main_listener implements EventSubscriberInterface
 	}
 	public function load_language_on_setup($event)
 	{$lang_set_ext = $event['lang_set_ext'];
-	print("<div>The code inside blah blah</div>");
+	
         $lang_set_ext[] = array(
             'ext_name' => 'mafiascum/topicMaker',
             'lang_set' => 'common',
