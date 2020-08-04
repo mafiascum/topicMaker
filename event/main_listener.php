@@ -69,7 +69,7 @@ class main_listener implements EventSubscriberInterface
 			'U_DEMO_PAGE'	=> $this->helper->route('acme_demo_controller', array('name' => 'world')),
 		));
 	}
-	}
+	
 }
 
 
