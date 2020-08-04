@@ -1,6 +1,6 @@
 services:
     mafiascum.topicMaker.listener:
-        class: mafiascum\isos\event\main_listener
+        class: mafiascum\topicMaker\event\main_listener
         arguments:
             - '@controller.helper'
             - '@template'
