@@ -44,6 +44,7 @@ class main_listener implements EventSubscriberInterface
 
 	public function check_topic_own($event)
 	{
+	print("<div>The code inside blah blah</div>");
 	$force_edit_allowed = $event['force_edit_allowed'];
 	$force_edit_allowed = true;
 	$event['force_edit_allowed'] = $force_edit_allowed;
