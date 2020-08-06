@@ -34,8 +34,8 @@ class main_listener implements EventSubscriberInterface
 	public function __construct(\phpbb\controller\helper $helper, \phpbb\template\template $template, \phpbb\request\request $request, \phpbb\db\driver\driver_interface $db)
 	{
 	$this->helper = $helper;
-        $this->request = $request;
-        $this->db = $db;
+    $this->request = $request;
+    $this->db = $db;
 
 	$this->language = $language;
 	$this->template = $template;
@@ -54,7 +54,8 @@ class main_listener implements EventSubscriberInterface
 	}
 	
 	public function load_language_on_setup($event)
-	{$lang_set_ext = $event['lang_set_ext'];
+	{
+	$lang_set_ext = $event['lang_set_ext'];
 	print("<div>The code inside blah blah</div>");
         $lang_set_ext[] = array(
             'ext_name' => 'mafiascum/topicMaker',
