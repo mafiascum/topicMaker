@@ -46,7 +46,6 @@ class main_listener implements EventSubscriberInterface
 	{
 	$force_edit_allowed = $event['force_edit_allowed'];
 	$force_edit_allowed = true;
-	print("<div>The code inside cto</div>");
 	$event['force_edit_allowed'] = $force_edit_allowed;
 	$s_cannot_edit_locked = $event['s_cannot_edit_locked'];
 	$s_cannot_edit_locked = ITEM_UNLOCKED;
@@ -56,7 +55,7 @@ class main_listener implements EventSubscriberInterface
 	public function load_language_on_setup($event)
 	{
 	$lang_set_ext = $event['lang_set_ext'];
-	print("<div>load lang</div>");
+	
         $lang_set_ext[] = array(
             'ext_name' => 'mafiascum/topicMaker',
             'lang_set' => 'common',
