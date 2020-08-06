@@ -1,5 +1,5 @@
 {
-"name": "mafiascum/topicmaker",
+"name": "mafiascum/topicMaker",
 "type": "phpbb-extension",
 "description": "MS Topic owning privileges",
 "homepage": "https://github.com/mafiascum/topicMaker",
@@ -16,7 +16,7 @@
   "mafiascum/privateTopics": ">0.1.0"
 },
 "extra": {
-  "display-name": "Topic Maker",
+  "display-name": "Topic Mayker",
   "soft-require": {
     "phpbb/phpbb": "~3.2"
 	}
