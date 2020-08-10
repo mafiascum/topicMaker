@@ -8,5 +8,6 @@ services:
             - '@dbal.conn'
             - '@user'
             - '@language'
+            - '@auth'
         tags:
             - { name: event.listener }
