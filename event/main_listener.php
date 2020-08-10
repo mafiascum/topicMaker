@@ -7,15 +7,16 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 class main_listener implements EventSubscriberInterface
 {
 	/* @var \phpbb\controller\helper */
-    	protected $helper;
+    protected $helper;
 
-    	/* @var \phpbb\template\template */
-    	protected $template;
+    /* @var \phpbb\template\template */
+    protected $template;
 
-    	/* @var \phpbb\request\request */
-    	protected $request;
-
-    	/* @var \phpbb\db\driver\driver */
+    /* @var \phpbb\request\request */
+    protected $request;
+	/* @var \phpbb\auth\auth */
+	protected $auth;
+    /* @var \phpbb\db\driver\driver */
 	protected $db;
 	/** @var \phpbb\user */
 	protected $user;
@@ -28,6 +29,10 @@ class main_listener implements EventSubscriberInterface
 		return array(
 			'core.posting_modify_cannot_edit_conditions' => 'check_topic_own',
 			'core.user_setup' => 'load_language_on_setup',
+			'core.posting_modify_cannot_edit_conditions'	=> 'post_edit',
+			'core.viewtopic_modify_post_action_conditions'	=> 'viewtopic_edit',
+			'core.permissions'								=> 'add_permissions',
+			'core.modify_posting_auth'   					=> 'post_auth',
 			);
 	}
 	
@@ -64,7 +69,22 @@ class main_listener implements EventSubscriberInterface
         $event['lang_set_ext'] = $lang_set_ext;
 	}
 	
-
+	public function post_edit($event)
+	{
+		print("<div>The code  blah blah</div>");
+	}
+	public function viewtopic_edit($event)
+	{
+		print("<div>html</div");
+	}
+	public function add_permissions($event)
+	{
+		print("hallpass");
+	}
+	public function post_auth($event)
+	{
+		print("hall monitor");
+	}
 }
 
 
