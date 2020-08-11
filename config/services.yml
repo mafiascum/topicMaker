@@ -1,6 +1,6 @@
 services:
-    gn36.firstpostedit.listener:
-        class: gn36\firstpostedit\event\listener
+    topicMaker.firstpostedit.listener:
+        class: mafiascum\topicMaker\event\listener
         arguments:
             - @auth
             - @user

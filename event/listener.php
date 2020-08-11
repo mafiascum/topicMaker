@@ -7,7 +7,7 @@
 *
 */
 
-namespace gn36\firstpostedit\event;
+namespace mafiascum\topicMaker\event;
 
 /**
 * @ignore
