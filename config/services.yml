@@ -1,13 +1,8 @@
 services:
-    mafiascum.topicMaker.listener:
-        class: mafiascum\topicMaker\event\main_listener
+    gn36.firstpostedit.listener:
+        class: gn36\firstpostedit\event\listener
         arguments:
-            - '@controller.helper'
-            - '@template'
-            - '@request'
-            - '@dbal.conn'
-            - '@user'
-            - '@language'
-            - '@auth'
+            - @auth
+            - @user
         tags:
             - { name: event.listener }
