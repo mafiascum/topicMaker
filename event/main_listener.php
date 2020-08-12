@@ -74,17 +74,18 @@ class main_listener implements EventSubscriberInterface
 	{
 		$event['s_cannot_edit_time'] = false;
 		$event['s_cannot_edit'] = false;
-		print_r ($event['force_delete_allowed']);
-		print_r ($event['force_edit_allowed']);
-		print_r ($event['force_softdelete_allowed']);
-		print_r ($event['row']);
-		print_r ($event['s_cannot_delete']);
-		print_r ($event['s_cannot_delete_locked']);
-		print_r ($event['s_cannot_delete_time']);
-		print_r ($event['s_cannot_edit']);
-		print_r ($event['s_cannot_edit_time']);
-		print_r ($event['s_cannot_edit_locked']);
-		print_r ($event['topic_data']);
+		//print_r ($event['force_delete_allowed']);
+		//print_r ($event['force_edit_allowed']);
+		//print_r ($event['force_softdelete_allowed']);
+		//print_r ($event['row']);
+		//print_r ($event['s_cannot_delete']);
+		//print_r ($event['s_cannot_delete_locked']);
+		//print_r ($event['s_cannot_delete_time']);
+		//print_r ($event['s_cannot_edit']);
+		//print_r ($event['s_cannot_edit_time']);
+		//print_r ($event['s_cannot_edit_locked']);
+		//print_r ($event['topic_data']);
+		print_r ($event);
 		print("<div>The code inside blah bla</div>");
 	}
 	public function add_permissions($event)
