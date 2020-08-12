@@ -27,7 +27,6 @@ class main_listener implements EventSubscriberInterface
     static public function getSubscribedEvents()
     {
 	return array(
-		'core.posting_modify_cannot_edit_conditions' => 'check_topic_own',
 		'core.user_setup' => 'load_language_on_setup',
 		'core.posting_modify_cannot_edit_conditions'	=> 'post_edit',
 		'core.viewtopic_modify_post_action_conditions'	=> 'viewtopic_edit',
@@ -46,11 +45,6 @@ class main_listener implements EventSubscriberInterface
 	$this->language = $language;
 	$this->template = $template;
 	$this->user = $user;
-	}
-
-	public function check_topic_own($event)
-	{
-	//skeleton
 	}
 	
 	public function load_language_on_setup($event)
@@ -73,12 +67,14 @@ class main_listener implements EventSubscriberInterface
 		print_r ($event['post_data']);
 		print_r ($event['s_cannot_edit_locked']);
 		print_r ($event['s_cannot_edit_time']);
+		print("<div>The code inside blah blah</div>");
 	}
 	
 	public function viewtopic_edit($event)
 	{
 		$event['s_cannot_edit_time'] = false;
 		$event['s_cannot_edit'] = false;
+		print("<div>The code inside blah bla</div>");
 	}
 	public function add_permissions($event)
 	{
