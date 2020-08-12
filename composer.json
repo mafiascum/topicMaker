@@ -7,7 +7,7 @@
     "time": "2017-09-12",
     "license": "GPL-2.0",
     "authors": [{
-	"name": "Isis",
+	"name": "Isis"
     }],
     "require": {
 	"php": ">=5.3.3",
