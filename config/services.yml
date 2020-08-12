@@ -1,8 +1,0 @@
-services:
-    topicMaker.firstpostedit.listener:
-        class: mafiascum\topicMaker\event\listener
-        arguments:
-            - @auth
-            - @user
-        tags:
-            - { name: event.listener }
