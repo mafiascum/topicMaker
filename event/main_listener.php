@@ -69,7 +69,7 @@ class main_listener implements EventSubscriberInterface
 		$event['s_cannot_edit_time'] = false;
 		$event['s_cannot_edit'] = false;
 	}
-	}
+	
 	public function viewtopic_edit($event)
 	{
 		$event['s_cannot_edit_time'] = false;
