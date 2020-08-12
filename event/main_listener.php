@@ -39,8 +39,8 @@ class main_listener implements EventSubscriberInterface
 	public function __construct(\phpbb\controller\helper $helper, \phpbb\template\template $template, \phpbb\request\request $request, \phpbb\db\driver\driver_interface $db)
 	{
 	$this->helper = $helper;
-    	$this->request = $request;
-    	$this->db = $db;
+    $this->request = $request;
+    $this->db = $db;
 	$this->auth = $auth;
 	$this->user = $user;
 	$this->language = $language;
@@ -68,6 +68,11 @@ class main_listener implements EventSubscriberInterface
 	{
 		$event['s_cannot_edit_time'] = false;
 		$event['s_cannot_edit'] = false;
+		print_r ($event['s_cannot_edit']);
+		print_r ($event['force_edit_allowed']);
+		print_r ($event['post_data']);
+		print_r ($event['s_cannot_edit_locked']);
+		print_r ($event['s_cannot_edit_time']);
 	}
 	
 	public function viewtopic_edit($event)
