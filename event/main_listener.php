@@ -39,8 +39,8 @@ class main_listener implements EventSubscriberInterface
 	public function __construct(\phpbb\controller\helper $helper, \phpbb\template\template $template, \phpbb\request\request $request, \phpbb\db\driver\driver_interface $db)
 	{
 	$this->helper = $helper;
-    $this->request = $request;
-    $this->db = $db;
+    	$this->request = $request;
+    	$this->db = $db;
 	$this->auth = $auth;
 	$this->user = $user;
 	$this->language = $language;
