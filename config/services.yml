@@ -1,0 +1,13 @@
+services:
+    mafiascum.topicMaker.listener:
+        class: mafiascum\topicMaker\event\main_listener
+        arguments:
+            - '@controller.helper'
+            - '@template'
+            - '@request'
+            - '@dbal.conn'
+            - '@user'
+            - '@language'
+            - '@auth'
+        tags:
+            - { name: event.listener }
