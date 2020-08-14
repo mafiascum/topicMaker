@@ -62,11 +62,14 @@ class main_listener implements EventSubscriberInterface
 	{
 		$event['s_cannot_edit_time'] = false;
 		$event['s_cannot_edit'] = false;
-		print_r ($event['s_cannot_edit']);
-		print_r ($event['force_edit_allowed']);
-		print_r ($event['post_data']);
-		print_r ($event['s_cannot_edit_locked']);
-		print_r ($event['s_cannot_edit_time']);
+		$event['s_cannot_delete_locked'] = false;
+		$event['s_cannot_edit_locked'] = false;
+		$event['force_delete_allowed'] = true;
+		print ($event['s_cannot_edit']);
+		print ($event['force_edit_allowed']);
+		print ($event['post_data']);
+		print ($event['s_cannot_edit_locked']);
+		print ($event['s_cannot_edit_time']);
 		print("<div>The code inside blah blah</div>");
 	}
 	
@@ -95,7 +98,7 @@ class main_listener implements EventSubscriberInterface
 	public function post_auth($event)
 	{
 		//force permit for testing purposes
-		if ($event['mode'] == 'edit')
+		
 			$event['is_authed'] = true;
 	}
 }
