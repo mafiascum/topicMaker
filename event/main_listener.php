@@ -16,8 +16,6 @@ class main_listener implements EventSubscriberInterface
     protected $request;
     /* @var \phpbb\auth\auth */
     protected $auth;
-    /* @var \phpbb\db\driver\driver */
-    protected $db;
     /** @var \phpbb\user */
     protected $user;
 	
@@ -60,17 +58,26 @@ class main_listener implements EventSubscriberInterface
 	
 	public function post_edit($event)
 	{
-		$event['s_cannot_edit_time'] = false;
-		$event['s_cannot_edit'] = false;
-		$event['s_cannot_delete_locked'] = false;
-		$event['s_cannot_edit_locked'] = false;
-		$event['force_delete_allowed'] = true;
+		if ['s_cannot_edit_time']
+			print (" s cant edit came out tru");
+		if [!('s_cannot_edit_time']
+			print (" s cant edit came out fals");
+		//$event['s_cannot_edit_time'] = false;
+		//$event['s_cannot_edit'] = false;
+		//$event['s_cannot_delete_locked'] = false;
+		//$event['s_cannot_edit_locked'] = false;
+		//$event['force_delete_allowed'] = true;
 	}
 	
 	public function viewtopic_edit($event)
 	{
-		$event['s_cannot_edit_time'] = false;
-		$event['s_cannot_edit'] = false;
+		if ['s_cannot_edit_time']
+			print (" s cant edit came out tru");
+		if [!('s_cannot_edit_time']
+			print (" s cant edit came out fals");
+		
+		//$event['s_cannot_edit_time'] = false;
+		//$event['s_cannot_edit'] = false;
 	}
 	public function add_permissions($event)
 	{
