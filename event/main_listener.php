@@ -58,24 +58,16 @@ class main_listener implements EventSubscriberInterface
 	
 	public function post_edit($event)
 	{
-		if ['s_cannot_edit_time']
-			print (" s cant edit came out tru");
-		if [!('s_cannot_edit_time']
-			print (" s cant edit came out fals");
 		//$event['s_cannot_edit_time'] = false;
 		//$event['s_cannot_edit'] = false;
 		//$event['s_cannot_delete_locked'] = false;
 		//$event['s_cannot_edit_locked'] = false;
-		//$event['force_delete_allowed'] = true;
+		$event['force_edit_allowed'] = true;
 	}
 	
 	public function viewtopic_edit($event)
 	{
-		if ['s_cannot_edit_time']
-			print (" s cant edit came out tru");
-		if [!('s_cannot_edit_time']
-			print (" s cant edit came out fals");
-		
+		$event['force_edit_allowed'] = true;
 		//$event['s_cannot_edit_time'] = false;
 		//$event['s_cannot_edit'] = false;
 	}
