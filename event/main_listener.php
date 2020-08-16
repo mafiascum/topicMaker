@@ -30,6 +30,7 @@ class main_listener implements EventSubscriberInterface
 		'core.viewtopic_modify_post_action_conditions'	=> 'viewtopic_edit',
 		'core.permissions'	=> 'add_permissions',
 		'core.modify_posting_auth'   => 'post_auth',
+		'core.viewtopic_add_quickmod_option_before' => 'add_unlock',
 		);
     }
 	
@@ -80,6 +81,10 @@ class main_listener implements EventSubscriberInterface
 		//force permit for testing purposes
 		
 			$event['is_authed'] = true;
+	}
+	public function add_unlock($event)
+	{
+		$event['quickmod_array']['unlock'] = true;
 	}
 }
 
