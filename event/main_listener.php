@@ -30,7 +30,7 @@ class main_listener implements EventSubscriberInterface
 		'core.viewtopic_modify_post_action_conditions'	=> 'viewtopic_edit',
 		'core.permissions'	=> 'add_permissions',
 		'core.modify_posting_auth'   => 'post_auth',
-		'core.viewtopic_add_quickmod_option_before' => 'add_unlock',
+		'core.mcp_lock_unlock_after' => 'force_unlock',
 		);
     }
 	
@@ -44,6 +44,12 @@ class main_listener implements EventSubscriberInterface
 	$this->language = $language;
 	$this->template = $template;
 	$this->user = $user;
+	}
+	
+	public function force_unlock($event)
+	{
+	if ($event['action'] == 'unlock')
+		lock_unlock($event['action'], $event['ids']);
 	}
 	
 	public function load_language_on_setup($event)
