@@ -85,8 +85,8 @@ class main_listener implements EventSubscriberInterface
 	public function post_auth($event)
 	{
 		//force permit for testing purposes
-		
-			$event['is_authed'] = true;
+		$event['topic_id']
+			
 	}
 	public function add_unlock($event)
 	{
