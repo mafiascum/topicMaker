@@ -55,6 +55,7 @@ class main_listener implements EventSubscriberInterface
 	public function inject_template_vars($event)
 	{
 		
+	}
 	public function load_language_on_setup($event)
 	{
 	$lang_set_ext = $event['lang_set_ext'];
