@@ -20,4 +20,5 @@ if (empty($lang) || !is_array($lang))
 $lang = array_merge($lang, array(
 	'UNLOCK' => 'Unlock',
 	'LINK_TO_PARENT_TOPIC' => 'Back to Topic',
+	'TEST' => 'remove',
 ));
