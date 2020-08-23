@@ -12,7 +12,7 @@ services:
         tags:
             - { name: event.listener }
     mafiascum.topicMaker.controller:
-    class: mafiascum\isos\controller\main_listener
+    class: mafiascum\isos\controller\main
     arguments:
         - '@config'
         - '@controller.helper'
