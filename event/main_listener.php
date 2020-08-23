@@ -31,6 +31,7 @@ class main_listener implements EventSubscriberInterface
 		'core.permissions'	=> 'add_permissions',
 		'core.modify_posting_auth'   => 'post_auth',
 		'core.mcp_lock_unlock_after' => 'force_unlock',
+		'core.viewtopic_assign_template_vars_before' => 'inject_template_vars',
 		);
     }
 	
@@ -51,7 +52,9 @@ class main_listener implements EventSubscriberInterface
 	if ($event['action'] == 'unlock')
 		lock_unlock($event['action'], $event['ids']);
 	}
-	
+	public function inject_template_vars($event)
+	{
+		
 	public function load_language_on_setup($event)
 	{
 	$lang_set_ext = $event['lang_set_ext'];
