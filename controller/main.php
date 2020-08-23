@@ -1,4 +1,5 @@
 <?php
+
 use \Symfony\Component\HttpFoundation\Response;
 
 namespace mafiascum\topicMaker\controller;

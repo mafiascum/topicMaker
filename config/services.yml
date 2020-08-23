@@ -12,12 +12,12 @@ services:
         tags:
             - { name: event.listener }
     mafiascum.topicMaker.controller:
-    class: mafiascum\isos\controller\main
-    arguments:
-        - '@config'
-        - '@controller.helper'
-        - '@language'
-        - '@template'
-        - '@dbal.conn'
-        - '@user'
-        - '@request'
+        class: mafiascum\isos\controller\main
+        arguments:
+            - '@config'
+            - '@controller.helper'
+            - '@language'
+            - '@template'
+            - '@dbal.conn'
+            - '@user'
+            - '@request'
