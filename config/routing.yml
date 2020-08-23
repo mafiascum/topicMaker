@@ -1,5 +1,5 @@
 unlocker_route:
 	path: /lock/{topic_id}
-	defaults: {_controller: mafiascum.topicMaker.controller:handle }
+	defaults: { _controller: mafiascum.topicMaker.controller:handle }
 	requirements:
 		topic_id: \d+
