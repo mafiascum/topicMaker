@@ -11,3 +11,13 @@ services:
             - '@auth'
         tags:
             - { name: event.listener }
+    mafiascum.topicMaker.controller:
+    class: mafiascum\isos\controller\main_listener
+    arguments:
+        - '@config'
+        - '@controller.helper'
+        - '@language'
+        - '@template'
+        - '@dbal.conn'
+        - '@user'
+        - '@request'
