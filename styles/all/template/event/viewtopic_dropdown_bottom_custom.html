@@ -16,7 +16,7 @@
           <input type="hidden" name="t" value="{{ TOPIC_ID }}">
           {% for user in TOPIC_USERS %}
           <li>
-            <input type="checkbox" name="author_ids[]" value="{{ user.ID }}"><span>{{ user.USERNAME }}</span>
+            <input type="button" name="author_ids[]" value="{{ user.ID }}"><span>{{ user.USERNAME }}</span>
           </li>
           {% endfor %}
           <hr class="dashed">
