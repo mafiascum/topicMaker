@@ -54,7 +54,12 @@ class main_listener implements EventSubscriberInterface
 	}
 	public function inject_template_vars($event)
 	{
-		
+		$topic_id = $event['topic_id'];
+
+        $this->template->assign_vars(array(
+            'U_UNLOCK_PAGE' => $this->helper->route('unlocker_route', array('topic_id' => $topic_id))
+        ));
+        
 	}
 	public function load_language_on_setup($event)
 	{
