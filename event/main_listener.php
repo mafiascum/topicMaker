@@ -57,7 +57,7 @@ class main_listener implements EventSubscriberInterface
 		$topic_id = $event['topic_id'];
 
         $this->template->assign_vars(array(
-            'U_UNLOCK_PAGE' => $this->helper->route('unlocker_route', array('topic_id' => $topic_id))
+            'U_UNLOCK' => $this->helper->route('unlocker_route', array('topic_id' => $topic_id))
         ));
         
 	}
